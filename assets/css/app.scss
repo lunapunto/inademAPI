@@ -1,0 +1,32 @@
+@import 'vars';
+
+#wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: $r;
+}
+#container{
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: $main;
+  .gradientBackground{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: -webkit-radial-gradient(rgba(#555 ,0.2), rgba(black ,0.2));
+    background: radial-gradient(rgba(#555 ,0.2), rgba(black ,0.2));
+  }
+}
+
+
+//RESPONSIVE
+@import 'responsive-app';

@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule    ^admin/login/?$    admin/login.php    [NC,L,QSA]
+RewriteRule    ^admin/?$    admin/index.php    [NC,L,QSA]
+RewriteRule    ^admin/([A-Za-z0-9-]+)/?$    admin/$1.php    [NC,L,QSA]
+
+RewriteRule    ^api/?$    api/index.php    [NC,L,QSA]

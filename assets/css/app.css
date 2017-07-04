@@ -1,0 +1,20 @@
+.matshadow { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.14); }
+
+.ta { -webkit-transition: all 0.5s ease-out; -moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out; }
+
+.ta_q { -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
+
+.cy { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%); }
+
+.cx { position: absolute; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%); }
+
+.cxy { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.flex { display: -webkit-flex; display: flex; flex-wrap: wrap; }
+
+#wrapper { width: 100%; height: 100%; position: absolute; top: 0; left: 0; font-family: "Roboto", sans-serif; }
+
+#container { width: 100%; min-height: 100%; position: relative; overflow: hidden; box-sizing: border-box; background: #72bf44; }
+#container .gradientBackground { width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 1; background: -webkit-radial-gradient(rgba(85, 85, 85, 0.2), rgba(0, 0, 0, 0.2)); background: radial-gradient(rgba(85, 85, 85, 0.2), rgba(0, 0, 0, 0.2)); }
+
+/*# sourceMappingURL=app.css.map */

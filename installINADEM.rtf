@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 CREATE TABLE IF NOT EXISTS  folios (\
+ID int(55) PRIMARY KEY AUTO_INCREMENT,\
+folio varchar(21),\
+convocatoria varchar(41),\
+tipo varchar(11),\
+email varchar(49),\
+nombre varchar(94),\
+rfc varchar(255)\
+);\
+CREATE TABLE IF NOT EXISTS notificaciones (\
+ID int(55) PRIMARY KEY AUTO_INCREMENT, \
+email varchar(255),\
+deviceID varchar(255),\
+groupTable varchar(255),\
+created TIMESTAMP DEFAULT CURRENT_TIMESTAMP\
+);\
+CREATE TABLE IF NOT EXISTS notificacionesEnviadas (\
+ID int(55) PRIMARY KEY AUTO_INCREMENT, \
+msg TEXT,\
+title varchar(255),\
+asesores int(1),\
+microempresarios int(1),\
+created TIMESTAMP DEFAULT CURRENT_TIMESTAMP\
+);\
+ALTER TABLE usuarios_microempresarios ADD analisis_plan_accion_status int(1);\
+ALTER TABLE usuarios_microempresarios ADD analisis_financiamiento_status int(1);\
+ALTER TABLE usuarios_microempresarios ADD analisis_status int(1);\
+\
+ALTER TABLE usuarios_representantes ADD islogged int(1) DEFAULT 0;\
+ALTER TABLE usuarios_representantes ADD last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;\
+\
+ALTER TABLE usuarios ADD role int(1) DEFAULT 3;\
+\
+\
+pushAnalisis(slug)\{\
+    var page;\
+    switch(slug)\{\
+      case "plan_accion":\
+        page = MicroPlanAccionPage;\
+      break;\
+      case "plan_financiamiento":\
+        page = MicroPlanFinanciamientoPage;\
+      break;\
+      case "analisis_micromercado":\
+        page = MicroAnalisisMercadoPage;\
+      break;\
+      case "reporte_micromercado":\
+        page = MicroReporteMicroPage;\
+      break;\
+    \}\
+    this.appCtrl.getRootNav().push(page, \{from: 'asesor', id: this.id\});\
+  \}\
+\
+}

@@ -1,0 +1,9 @@
+{
+    "require": {
+        "znarkus/postmark": "^0.1.0",
+        "wildbit/postmark-php": "^2.3",
+        "eventviva/php-image-resize": "^1.6",
+        "rollbar/rollbar": "^1.1",
+        "maknz/slack": "^1.7"
+    }
+}

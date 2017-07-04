@@ -1,0 +1,1 @@
+Usage: mysql.server  {start|stop|restart|reload|force-reload|status|configtest|bootstrap}  [ MySQL server options ]

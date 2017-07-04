@@ -1,0 +1,26 @@
+.matshadow { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.14); }
+
+.ta { -webkit-transition: all 0.5s ease-out; -moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out; }
+
+.ta_q { -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
+
+.cy { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%); }
+
+.cx { position: absolute; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%); }
+
+.cxy { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.flex { display: -webkit-flex; display: flex; flex-wrap: wrap; }
+
+.pace { -webkit-pointer-events: none; pointer-events: none; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+
+.pace-inactive { display: none; }
+
+.pace { background: url("../pace.svg") #72bf44 no-repeat center center; background-size: 110px auto; width: 100%; height: 100%; position: fixed; z-index: 2000; top: 0; left: 0; }
+
+.pace .pace-progress { background: #8fcc6a; position: fixed; z-index: 2000; top: 0; right: 100%; width: 100%; height: 10px; }
+
+.body_portierHome .pace { background-color: #222; }
+.body_portierHome .pace-progress { background: #444; }
+
+/*# sourceMappingURL=pace.css.map */

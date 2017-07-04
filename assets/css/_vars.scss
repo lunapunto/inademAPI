@@ -1,0 +1,56 @@
+$r: 'Roboto', sans-serif;
+$o: 'Open Sans', serif;
+$green: #72bf44;
+$dark: #108f49;
+$main: $green;
+@mixin webcompat($attr, $string){
+    -webkit-#{$attr}: $string;
+    -moz-#{$attr} : $string;
+    #{$attr} : $string;
+}
+@mixin animation($string){
+    @include webcompat(animation,$string);
+}
+@mixin transform($string){
+    @include webcompat(transform,$string);
+}
+@mixin transition($string){
+    @include webcompat(transition,$string);
+}
+.matshadow{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.14);
+}
+.ta{
+    @include transition(all .5s ease-out);
+}
+.ta_q{
+    @include transition(all .2s ease-out);
+}
+.cy{
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+.cx{
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+.cxy{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%,-50%));
+}
+.flex{
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin colorize($color){
+  @extend .ta_q;
+  color: $color;
+  &:hover{
+    color: darken($color,10%);
+  }
+}
