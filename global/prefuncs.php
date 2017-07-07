@@ -27,6 +27,7 @@ foreach($classes as $class){
 }
 */
 require_once '../classes/db.php';
+require_once '../classes/closeclient.php';
 
 #PARTS
 function get_part($part,$queries=array(),$dirname='main'){
